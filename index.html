@@ -3,8 +3,31 @@
 <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
     <title>zxy</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
 <body>
 我叫zxy。。。。
+<button type="button" onclick="loadXMLDoc()">修改内容</button>
 </body>
+<script type="text/javascript">
+	function loadXMLDoc()
+{
+	$.ajax({
+	  type:"POST",
+	  url:"39.108.58.234/blueSea/uuid4Articles",
+	  dataType:"json",
+	  data:{},
+	  beforeSend:function(){
+	    //some js code
+	  },
+	  success:function(msg){alert(msg);
+	    console.log(msg)
+	  },
+	  error:function(){
+	    console.log("error")
+	    alert("error >_<");
+  }
+})
+}
+</script>
 </html>
