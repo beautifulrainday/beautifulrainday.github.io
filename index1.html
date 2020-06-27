@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <title>zxy</title>
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+我叫zxy。。。。
+<button type="button" onclick="loadXMLDoc()">修改内容</button>
+</body>
+<script type="text/javascript">
+	function loadXMLDoc()
+{
+	/*$.ajax({
+	  type:"POST",
+	  url:"39.108.58.234/blueSea/uuid4Articles",
+	  dataType:"json",
+	  data:{},
+	  beforeSend:function(){
+	    //some js code
+	  },
+	  success:function(msg){alert(msg);
+	    console.log(msg)
+	  },
+	  error:function(){
+	    console.log("error")
+	    alert("error >_<");
+  	  }
+    })*/
+
+    $.ajax({
+    	type:"GET",
+    	data:{},
+    	dataType:"json",
+    	url:"https://www.my51share.com/blueSea/getPlayDetailPlus?hdId=797829&tagId=3",
+    	success:function(msg){
+    		console.log(msg)
+    	},
+    	error:function(e){
+    		console.log(e)
+    	}
+    })
+}
+</script>
+</html>
