@@ -12,7 +12,7 @@
 <script type="text/javascript">
 	function loadXMLDoc()
 {
-	$.ajax({
+	/*$.ajax({
 	  type:"POST",
 	  url:"39.108.58.234/blueSea/uuid4Articles",
 	  dataType:"json",
@@ -26,8 +26,21 @@
 	  error:function(){
 	    console.log("error")
 	    alert("error >_<");
-  }
-})
+  	  }
+    })*/
+
+    $.ajax({
+    	type:"GET",
+    	data:{},
+    	dataType:"json",
+    	url:"https://www.my51share.com/blueSea/getPlayDetailPlus?hdId=797829&tagId=3",
+    	success:function(msg){
+    		console.log(msg)
+    	},
+    	error:function(e){
+    		console.log(e)
+    	}
+    })
 }
 </script>
 </html>
